@@ -9,6 +9,9 @@ import { CotacoesComponent } from './cotacoes/cotacoes.component';
 import { FornecedoresComponent } from './fornecedores/fornecedores.component';
 import { CriaCotacaoComponent } from './cria-cotacao/cria-cotacao.component';
 import { FinalizaCotacaoComponent } from './finaliza-cotacao/finaliza-cotacao.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ContatoComponent } from './contato/contato.component';
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { FinalizaCotacaoComponent } from './finaliza-cotacao/finaliza-cotacao.co
     CotacoesComponent,
     FornecedoresComponent,
     CriaCotacaoComponent,
-    FinalizaCotacaoComponent
+    FinalizaCotacaoComponent,
+    NavbarComponent,
+    ContatoComponent,
+    PrincipalComponent
   ],
   imports: [
     BrowserModule,
