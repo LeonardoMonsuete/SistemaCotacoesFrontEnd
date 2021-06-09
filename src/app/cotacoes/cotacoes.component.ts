@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-cotacoes',
   templateUrl: './cotacoes.component.html',
-  styleUrls: ['./cotacoes.component.css']
+  styleUrls: ['./cotacoes.component.scss']
 })
 export class CotacoesComponent implements OnInit {
 
