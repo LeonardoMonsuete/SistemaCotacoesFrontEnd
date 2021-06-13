@@ -12,7 +12,6 @@ import { ProdutosComponent } from './produtos/produtos.component'
 import { UsuariosComponent } from './usuarios/usuarios.component'
 
 const routes: Routes = [
-
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'fornecedores', component: FornecedoresComponent },

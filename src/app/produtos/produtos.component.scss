@@ -1,6 +1,8 @@
 .container-fluid{
     height: 88.8%;
     background: linear-gradient(to right, #1E6091, #33AEFF);
+    padding: 0;
+
 }
 h1{
     padding-top: 15px;
@@ -16,3 +18,44 @@ button{
     border-radius: 15px;
     color: white;
 }
+
+.listagem{
+    width: 100%;
+    background: linear-gradient(to right, #1E6091, #33AEFF);
+    padding-top: 25px;
+    border-radius: 2px;
+    color: white;
+    text-align: center;
+
+}
+
+#table-list-produtos{
+    background-color: white;
+    margin-right: 55px;
+    margin-left: 55px;
+}
+
+#div-table{
+    margin-left: 0px;
+    background-color: #343a40;
+
+}
+
+.table-dark:hover{
+    text-decoration: none;
+    background-color: #343a40;
+}
+
+.table-info{
+    background-color: #1E6091;
+}
+
+.table-info:hover{
+    background-color: #1E6091;
+}
+
+
+tbody{
+    color: black;
+}
+

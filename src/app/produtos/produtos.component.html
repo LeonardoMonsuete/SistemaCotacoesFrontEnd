@@ -10,7 +10,7 @@
         </div>
         <div class="col-md-2"></div>
       </div>
-      <form>
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
 
         
         <div style="padding:20px;" class="form-row">
@@ -18,7 +18,7 @@
             <div class="col-md-2"></div>
               <div class="form-group col-md-8">
                 <label for="nome">Nome do produto</label>
-                <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+                <input ngModel required type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
               </div>
             <div class="col-md-2"></div>
           </div>
@@ -26,8 +26,8 @@
           <div class="row col-md-12">
             <div class="col-md-2"></div>
               <div class="form-group col-md-8">
-                <label for="medida">text</label>
-                <input type="text" class="form-control" id="medida" name="medida" placeholder="Medida">
+                <label for="medida">Medidas do produto</label>
+                <input ngModel required type="text" class="form-control" id="medidas" name="medidas" placeholder="Medida">
               </div>
             <div class="col-md-2"></div>
           </div>
@@ -44,7 +44,7 @@
                   </div>
                   <div class="col-md-8">
                     <label for="medida">Selecione o produto pai</label>
-                    <select disabled name="produtoPaiId" class="custom-select">
+                    <select ngModel disabled name="produtoPaiId" class="custom-select">
                       <option selected>Selecione um produto</option>
                       <option value="1">Produto 01</option>
                       <option value="2">Produto 02</option>
@@ -74,7 +74,44 @@
 
         
       </form>
+      
     </div>
   </div>
+
+  <br>
+  <hr>
+  <br>
+  
+    <div class="listagem">
+      <div id="div-table" style="padding-top: 15px;"  class="row col-md-12 d-flex justify-content-center">
+        <h2 class="border-bottom">Listagem dos produtos cadastrados</h2>
+        <table id="table-list-produtos" class="table table-hover">
+          
+          <thead class="table-info">
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Medidas</th>
+              <th scope="col">Id pai</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let produto of produtos">
+              <td>{{ produto.id }}</td>
+              <td>{{ produto.nome }}</td>
+              <td>{{ produto.medidas }}</td>
+              <td>{{ produto.produtoPaiId }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  
     
 </div>
+
+
+
+
+

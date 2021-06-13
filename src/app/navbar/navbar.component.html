@@ -18,6 +18,7 @@
             <a class="nav-link" href="cotacoes">Cotações</a>
             <a class="nav-link" href="produtos">Produtos</a>
             <a class="nav-link" href="usuarios">Usuários</a>
+            <a class="nav-link" href="fornecedores">Fornecedores</a>
           </div>
         </div>
 
@@ -33,15 +34,19 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="fornecedores">Fornecedores</a>
-      </li>
-
-      <li class="nav-item">
         <a class="nav-link" href="contato">Contato</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="login">Login</a>
+        <div *ngIf="checkIsAuth() == false">
+          <a class="nav-link" href="login">Login</a>
+        </div>
+
+        <div *ngIf="checkIsAuth() == true" >
+          <a class="nav-link" (click)="logout()">Sair</a>
+        </div>
+        
+      
       </li>
 
 

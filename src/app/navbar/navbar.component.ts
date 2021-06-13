@@ -12,4 +12,17 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  checkIsAuth(): boolean{
+    console.log("chamou a funcao");
+    if(!window.localStorage.getItem('autenticado')){
+      return false;
+    }
+    return true;
+  }
+
+  logout(){
+    window.localStorage.removeItem('autenticado');
+    window.location.href = 'login';
+  }
+
 }

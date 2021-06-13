@@ -1,26 +1,39 @@
-
-    <div class="container-fluid">
-      <div class="row col-md-12">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-          <div class="card card-signin my-5">
-            <div class="card-body">
-              <h5 class="card-title text-center">Faça seu Login!</h5>
-              <form class="form-signin">
-                <div class="form-label-group">
-                  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                  <label for="inputEmail">Email</label>
-                </div>
-  
-                <div class="form-label-group">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                  <label for="inputPassword">Senha</label>
-                </div>
-
-                <a href="principal"class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Entrar</a>
-              </form>
-            </div>
-          </div>
+<div class="container-fluid">
+  <div class="row col-md-12">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 box-login">
+      <form class="form-signin" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+        <img class="mb-4" src="../../assets/newlogo.png" alt="" width="150" height="160">
+        <h1 class="h3 mb-3 font-weight-normal">Bem-vindo(a) à E-Prices</h1>
+       <div class="row col-md-12">
+        <div class="col-md-2"></div>
+        <div style="text-align: left;" class="form-group col-md-8">
+          <label for="login">Login</label>
+          <input ngModel type="login" id="login" name="login" class="form-control" placeholder="Digite seu Login" required autofocus>
         </div>
-      </div>
+       </div>
+       <div class="row col-md-12">
+        <div class="col-md-2"></div>
+        <div style="text-align: left;" class="form-group col-md-8">
+          <label for="senha">Password</label>
+          <input ngModel type="password" id="senha" name="senha" class="form-control" placeholder="Password" required >
+        </div>
+       </div>
+       <div class="row col-md-12">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <button id="entrar" class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        </div>
+       </div>
+        
+
+      
+
+      
+        
+        <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+      </form>
     </div>
+  </div>
   
+</div>
