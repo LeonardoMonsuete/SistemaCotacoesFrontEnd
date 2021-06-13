@@ -1,23 +1,22 @@
-body {
-
-    background-size: 1400px 700px;
-    background-position: 30%;
-    background-attachment: fixed;
+  
+  body{
+    height: 88.8% !important;
+    background: #1E6091 !important;
+    background: linear-gradient(to right, #1E6091, #33AEFF) !important;
   }
   
-  
   .text {
-    font-family: raleway;
     font-size: 40px;
     position: absolute center;
     text-align: center;
     padding-left: 0%;
-    color: #000;
-    margin-top: 43px;
+    color: #fff;
+    margin-top: 20px;
+    background-color: #4A4B4B;
+    margin-bottom: -10px;
   }
   
   .text1 {
-    font-family: raleway;
     font-size: 21px;
     text-align: center;
     margin-top: -20px;
@@ -26,38 +25,22 @@ body {
   
   .image {
     text-align: center;
-    width: 200px;
+    width: 340px;
     /* Container's dimensions */
-    
-    height: 200px;
-    -webkit-border-radius: 75%;
-    -moz-border-radius: 75%;
-    box-shadow: 0 0 0 1px #eee;
-    background: url("/src/assets/newlogo.png") center center no-repeat;
+   
+    height: 170px;
+    border-radius: 30px;
+    // box-shadow: 0 0 0 1px #eee;
+    background: url("../../assets/newlogo.png") center center no-repeat;
     background-size: cover;
     margin: auto;
-    margin-top: 20px;
-    margin-bottom: -30px;
+    // margin-top: 20px;
+    //margin-bottom: -30px;
     align-content: center;
+    background-color: #d5dee8
   }
   
   
-  .newimage{
-    text-align: center;
-    width: 200px;
-    /* Container's dimensions */
-    
-    height: 200px;
-    -webkit-border-radius: 75%;
-    -moz-border-radius: 75%;
-    box-shadow: 0 0 0 1px #eee;
-    /*background: url("./src/assets/newlogo.png") center center no-repeat;*/
-    background-size: cover;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: -30px;
-    align-content: center;
-  }
   .trick {
     display: inline-block;
     vertical-align: middle;
@@ -81,29 +64,22 @@ body {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-  
+
   #overlay {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    padding: 0 0 0 0;
-    opacity: 1.0;
-    -webkit-transition: opacity 2.25s ease;
-    -moz-transition: opacity 10.25s ease;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    height: auto !important;
+    width: 100% !important;
+    background: #1E6091;
+    background: linear-gradient(to right, #1E6091, #33AEFF);
   }
-  
-  #box:hover #overlay {
-    opacity: 1;
-  }
-  
-  
-  
-  
-  
   .panel-group{
     width:350px;
     margin:auto;
     /*margin:50px 400px 50px 400px;*/
     max-width:100%;
+    max-height: 100%;
   }
   
   .panel-heading{
@@ -114,27 +90,34 @@ body {
     text-align: center;
     background-color:transparent;
     color:#000;
-    font-family:lato;
     font-weight:300;
     font-size:15px;
     max-width:100%;
   }
   
   
-  
+  .btn-link{
+    color: #1E6091 !important;
+    text-decoration:none; 
+  }
+
+  .btn-link:hover{
+    color: #34A0A4 !important;
+    text-decoration:none; 
+  }
   
   #accordion{
     background-color: transparent;
     max-width:100%;
-    margin-bottom:200px;
+    padding: 15px 15px 0px 0px ;
+    width: 70%;
+    text-align: center;
+    align-content: center;
+    height: 100%;
+    color: #3F3F3F;
+    font-size: 18px;
   }
-  
-  
-  
-  
-  
-  
-  
+
   .btn-outline {
     color: inherit;
     transition: all 1.4s;
@@ -152,11 +135,11 @@ body {
     margin: 1px 5px 1px 0px;
     width: 100%;
     text-align:center;
-    font-family: raleway;
     font-weight: 300;
     max-width:100%;
   }
   
+
   
   
   
@@ -187,112 +170,56 @@ body {
   textarea:hover::-webkit-input-placeholder {
     color: #fff;
     font-size: 15px;
-    font-family: raleway;
   }
   
   input:hover:focus::-webkit-input-placeholder,
   textarea:hover:focus::-webkit-input-placeholder {
     color: #fff;
-    font-family: raleway;
   }
   
   input:hover::-moz-placeholder,
   textarea:hover::-moz-placeholder {
     color: #fff;
     font-size: 15px;
-    font-family: raleway;
   }
   
   input:hover:focus::-moz-placeholder,
   textarea:hover:focus::-moz-placeholder {
     color: #fff;
-    font-family: raleway;
   }
   
   input:hover::placeholder,
   textarea:hover::placeholder {
     color: #fff;
     font-size: 15px;
-    font-family: raleway;
   }
   
   input:hover:focus::placeholder,
   textarea:hover:focus::placeholder {
     color: #fff;
-    font-family: raleway;
   }
   
   input:hover::placeholder,
   textarea:hover::placeholder {
     color: #fff;
     font-size: 15px;
-    font-family: raleway;
   }
   
   input:hover:focus::-ms-placeholder,
   textarea:hover::focus:-ms-placeholder {
     color: #fff;
-    font-family: raleway;
   }
   
   #form {
     position: relative;
     width: 100%;
     margin: 0px auto 0px auto;
-    font-family: raleway;
   }
-  
-  input {
-    font-family: raleway;
-    font-size: 15px;
-    width: 100%;
-    height: 50px;
-    padding: 0px 12px 0px 12px;
-    background: transparent;
-    outline: none;
-    color: #726659;
-    border: solid 1px #eee;
-    border-bottom: none;
-    transition: all 0.9s ease-in-out;
-    -webkit-transition: all 0.9s ease-in-out;
-    -moz-transition: all 0.9s ease-in-out;
-    -ms-transition: all 0.9s ease-in-out;
-  }
-  
-  input:hover {
-    background: #ccc;
-    color: #fff;
-    font-family: raleway;
-  }
-  
-  textarea {
-    width: 100%;
-    max-width: 100%;
-    height: 110px;
-    max-height: 110px;
-    padding: 15px;
-    background: transparent;
-    outline: none;
-    color: #000;
-    font-family: raleway;
-    font-size: 25px;
-    border: solid 1px #eee;
-    transition: all 0.9s ease-in-out;
-    -webkit-transition: all 0.9s ease-in-out;
-    -moz-transition: all 0.9s ease-in-out;
-    -ms-transition: all 0.9s ease-in-out;
-  }
-  
-  textarea:hover {
-    background: #ccc;
-    color: #fff;
-    font-family: raleway;
-  }
+    
   
   #submit {
     width: 100%;
     padding: 0;
-    font-family: raleway;
     font-size: 20px;
     color: #000;
     outline: none;
@@ -307,9 +234,58 @@ body {
     background-color: #ccc;
   }
 
-  .Contato {
-    h4{
-      color: #1E6091;
-      font-size: medium;
+  svg{
+    margin-right:10px;
+  }
+
+  .divisor{
+    color:#1E6091; 
+    margin-left: 10px; 
+    margin-right: 10px; 
+    vertical-align: middle;
+  }
+
+  .card{
+    background: #4A4B4B;
+  }
+
+  .card-body{
+    background: #4A4B4B;
+    color: #fff !important;
+    border-color: #4A4B4B;
+  }
+
+  .card-header{
+    background-color: #B7B9BA;
+    border-color: #B7B9BA;
+    a{
+      color: white !important;
     }
   }
+
+.alert-info{
+  width: 100% !important; 
+  background: #1E6091;
+  background: linear-gradient(to right, #1E6091, #33AEFF);
+  border-color: transparent;
+  color: #fff !important;
+}
+
+.alert{
+  border-color: transparent;
+}
+
+#container-contato{
+  background: #1E6091;
+  background: linear-gradient(to right, #1E6091, #33AEFF);
+  height: auto !important;
+  width: 100% !important;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

@@ -1,9 +1,23 @@
-.collapse{
-    margin-left: 880px;
-    a {
-        color: #1E6091;
-    }
-}
 .navbar-brand{
     font-family: 'Times New Roman', Times, serif;
 }
+
+#img-navbar{
+    background-color: #1E6091 !important;
+    background-image: url("../../assets/newlogo.png") !important;
+}
+
+.navbar {
+    padding: 0;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+a{
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+
