@@ -25,3 +25,13 @@ a:hover{
     height: 100% !important;
     font-family: 'Crimson Text', serif;
 }
+
+.btn-primary{
+  background-color: #33AEFF;
+  border-color: #33AEFF;
+}
+
+.btn-primary:hover{
+  background-color: #1E6091;
+  border-color: #1E6091;
+}

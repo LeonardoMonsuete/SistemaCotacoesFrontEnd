@@ -13,6 +13,8 @@ import { FinalizaCotacaoComponent } from './finaliza-cotacao/finaliza-cotacao.co
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContatoComponent } from './contato/contato.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { ProdutosComponent } from './produtos/produtos.component';
+import { UsuariosComponent} from './usuarios/usuarios.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { PrincipalComponent } from './principal/principal.component';
     FinalizaCotacaoComponent,
     NavbarComponent,
     ContatoComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    ProdutosComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,
