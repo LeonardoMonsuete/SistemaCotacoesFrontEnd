@@ -12,7 +12,7 @@
       </div>
       <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
 
-        
+         
         <div style="padding:20px;" class="form-row">
           <div class="row col-md-12">
             <div class="col-md-2"></div>
@@ -36,19 +36,18 @@
             <div class="col-md-2"></div>
               <div class="form-group col-md-8">
                 <div class="row">
-                  <div class="col-md-4">
+                  <!-- <div class="col-md-4">
                       <div style="margin-left: 5px;" class="form-group form-check">
                         <input style="margin-left:30px;" type="checkbox" class="custom-control-input" id="is_componente" #is_componente>
                         <label class="custom-control-label" for="is_componente">É produto componente ?</label>
                       </div>
-                  </div>
-                  <div class="col-md-8">
+                  </div> -->
+                  <div class="col-md-12">
                     <label for="medida">Selecione o produto pai</label>
-                    <select ngModel disabled name="produtoPaiId" class="custom-select">
+                    <select ngModel name="produtoPaiId" class="custom-select">
                       <option selected>Selecione um produto</option>
-                      <option value="1">Produto 01</option>
-                      <option value="2">Produto 02</option>
-                      <option value="3">Produto 03</option>
+                      <option *ngFor="let produto of produtos" value="{{produto.id}}">{{ produto.nome }}</option>
+                    
                     </select>
                   </div>
                 </div>

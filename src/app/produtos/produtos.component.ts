@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 
 export class Produto {
@@ -29,6 +29,7 @@ export class ProdutosComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.checkIsAuth();
     this.getProdutos();
   }
 
@@ -46,8 +47,19 @@ export class ProdutosComponent implements OnInit {
     //console.log(f.value);
     this.httpClient.post(this.configUrl, f.value)
     .subscribe((result) => {
-      this.ngOnInit(); //reload the table
+      this.resetUserForm(f); 
     });
+  }
+
+  resetUserForm(userForm: NgForm) {
+    userForm.resetForm();
+    this.ngOnInit();
+  }
+
+  checkIsAuth(){
+    if(!window.localStorage.getItem('autenticado')){
+      window.location.href = 'login';
+    }
   }
 
 }

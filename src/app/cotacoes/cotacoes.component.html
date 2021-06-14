@@ -1,1 +1,106 @@
+<div class="container-fluid">
 
+  
+    <div style="padding-top: 15px;"  class="row col-md-12 d-flex justify-content-center">
+      <div class="col-md-10 container-form">
+        <div style="padding:0; margin:0;" class="row col-md-12 border-bottom text-center">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <h1 class="">Realizar cotação</h1>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+         
+          <div style="padding:20px;" class="form-row">
+            <div class="row col-md-12">
+              <div class="col-md-2"></div>
+                <div class="form-group col-md-3">
+                  <label for="nome">Escolha o(s) fornecedor(es)</label>
+                
+                    <select ngModel multiple class="form-control" id="fornecedores" name="fornecedores">
+                      <option *ngFor="let fornecedor of fornecedores" value="{{ fornecedor.id }}">{{ fornecedor.nome }}</option>
+
+                    </select>
+                
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="nome">Escolha o(s) produto(es)</label>
+                  
+                      <select ngModel multiple class="form-control" id="produtos" name="produtos">
+                         
+                        <option *ngFor="let produto of produtos" value="{{ produto.id }}">{{ produto.nome }}</option>
+                      </select>
+                  
+                  </div>
+
+                  <div class="form-group col-md-3">
+                    <label for="solicitanteId">Escolha o(s) Cliente(s)</label>
+                      <select ngModel class="form-control" id="solicitanteId" name="solicitanteId">
+                        <option value="">Selecione um cliente</option>
+                        <option *ngFor="let usuario of usuarios" value="{{ usuario.id }}">{{ usuario.nome }}</option>
+                      </select>
+                  </div>
+            </div>
+  
+            <div class="row col-md-12">
+              <div class="col-md-2"></div>
+                <div class="form-group col-md-9">
+                  <label for="prazo">Prazo da cotação</label>
+                  <input ngModel required type="datetime-local" class="form-control" id="prazo" name="prazo">
+                </div>
+              <div class="col-md-2"></div>
+            </div>
+  
+            <div class="row col-md-12">
+              <div class="col-md-5"></div>
+              <button style="margin:15px;" type="submit" class="btn btn-primary">Registrar cotação</button>
+              <div class="col-md-2"></div>
+            </div>
+    
+          </div>
+   
+  
+          
+        </form>
+        
+      </div>
+    </div>
+  
+    <br>
+    <hr>
+    <br>
+    
+      <div class="listagem">
+        <div id="div-table" style="padding-top: 15px;"  class="row col-md-12 d-flex justify-content-center">
+          <h2 class="border-bottom">Listagem de cotações</h2>
+          <table id="table-list-produtos" class="table table-hover">
+            
+            <thead class="table-info">
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Prazo</th>
+                <th scope="col">Ação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cotacao of cotacoes">
+                <td>{{ cotacao.id }}</td>
+                <td>{{ cotacao.prazo }}</td>
+                <td><button (click)="detalhaCotacao(cotacao.id)" class="btn btn-primary">Detalhes</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+    
+      
+  </div>
+  
+  
+  
+  
+  
+  

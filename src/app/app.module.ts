@@ -16,6 +16,7 @@ import { PrincipalComponent } from './principal/principal.component';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { UsuariosComponent} from './usuarios/usuarios.component';
 import { HttpClientModule} from '@angular/common/http';
+import { DetalhesCotacaoComponent } from './detalhes-cotacao/detalhes-cotacao.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule} from '@angular/common/http';
     ContatoComponent,
     PrincipalComponent,
     ProdutosComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    DetalhesCotacaoComponent
   ],
   imports: [
     BrowserModule,

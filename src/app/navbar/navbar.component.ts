@@ -13,7 +13,6 @@ export class NavbarComponent implements OnInit {
   }
 
   checkIsAuth(): boolean{
-    console.log("chamou a funcao");
     if(!window.localStorage.getItem('autenticado')){
       return false;
     }

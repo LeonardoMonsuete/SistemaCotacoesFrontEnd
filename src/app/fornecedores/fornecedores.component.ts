@@ -29,6 +29,7 @@ export class FornecedoresComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.checkIsAuth();
     this.getFornecedores();
   }
 
@@ -53,6 +54,13 @@ export class FornecedoresComponent implements OnInit {
     userForm.resetForm();
     this.ngOnInit();
   } 
+
+    
+  checkIsAuth(){
+    if(!window.localStorage.getItem('autenticado')){
+      window.location.href = 'login';
+    }
+  }
 
 }
  
